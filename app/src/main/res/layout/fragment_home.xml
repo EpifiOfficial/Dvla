@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5244141"
+        app:layoutDescription="@xml/fragment_home_scene">
+
+        <ImageView
+            android:id="@+id/IvLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/dvla_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/IvLogo">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_main_activity"
+                >
+
+                <ImageView
+                    android:id="@+id/IvDragUp"
+                    android:layout_width="60dp"
+                    android:layout_height="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/view_drag_up" />
+
+                <TextView
+                    android:id="@+id/TvRegistrationNumberTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/IvDragUp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Vehicle registration number"
+                    android:textColor="#084645"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EtRegisterNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/TvRegistrationNumberTitle"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="22dp"
+                    android:background="@drawable/view_edit_text"
+                    android:fontFamily="@font/roboto_bold"
+                    android:hint="AA00000 "
+                    android:inputType="text"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textAlignment="textStart"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#F6F6F6"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/TvHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EtRegisterNumber"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="History"
+                    android:textColor="#084645"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/TvNoHistoryYet1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-_(T_T)_-"
+                    android:textSize="40sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/TvHistory"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#00474B"
+                    android:fontFamily="@font/roboto_bold"
+                    />
+                <TextView
+                    android:id="@+id/TvNoHistoryYet2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No history yet"
+                    android:textSize="24sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/TvNoHistoryYet1"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#00474B"
+                    android:fontFamily="@font/roboto_bold"
+                    />
+
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TvHistory"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</RelativeLayout>
